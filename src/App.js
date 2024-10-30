@@ -22,7 +22,7 @@ const App = () => {
         ],
       },
     ],
-    { basename: "/Trio_security" }
+    { basename: "/Triosecurity" }
   );
 
   // Return RouterProvider to make use of the router
