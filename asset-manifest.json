@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Triosecurity/static/css/main.456969ae.css",
-    "main.js": "/Triosecurity/static/js/main.88615c99.js",
+    "main.js": "/Triosecurity/static/js/main.bd5e10e3.js",
     "static/js/453.1afd1409.chunk.js": "/Triosecurity/static/js/453.1afd1409.chunk.js",
     "static/media/heroimg.jpeg": "/Triosecurity/static/media/heroimg.41f8a1f96dabe9c24cfc.jpeg",
     "static/media/ma.png": "/Triosecurity/static/media/ma.520afd861a41919c6820.png",
@@ -27,11 +27,11 @@
     "static/media/Arrow.svg": "/Triosecurity/static/media/Arrow.1ac34a608e9e46873dc912254b989a11.svg",
     "static/media/arr.svg": "/Triosecurity/static/media/arr.0c6531fb1d2618054f8259e8adff9b83.svg",
     "main.456969ae.css.map": "/Triosecurity/static/css/main.456969ae.css.map",
-    "main.88615c99.js.map": "/Triosecurity/static/js/main.88615c99.js.map",
+    "main.bd5e10e3.js.map": "/Triosecurity/static/js/main.bd5e10e3.js.map",
     "453.1afd1409.chunk.js.map": "/Triosecurity/static/js/453.1afd1409.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.456969ae.css",
-    "static/js/main.88615c99.js"
+    "static/js/main.bd5e10e3.js"
   ]
 }
