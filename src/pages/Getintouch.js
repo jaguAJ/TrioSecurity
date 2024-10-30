@@ -15,28 +15,47 @@ const Getintouch = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-
     const formData = new FormData(event.target);
-
     formData.append("access_key", "90b64bee-9127-47f0-8d3a-ae134314a1b5");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
 
-    if (data.success) {
+      const data = await response.json();
+
+      if (data.success) {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title:
+            "Thanks for reaching out! We’re excited to connect with you and will reply soon!",
+          showConfirmButton: false,
+          timer: 3000,
+        });
+        event.target.reset();
+      } else {
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: "Failed to submit the form. Please try again later.",
+          showConfirmButton: true,
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting the form:", error);
       Swal.fire({
         position: "center",
-        icon: "success",
-        title:
-          "Thanks for reaching out! We’re excited to connect with you and will reply soon!",
-        showConfirmButton: false,
-        timer: 3000,
+        icon: "error",
+        title: "Network error. Please try again later.",
+        showConfirmButton: true,
       });
-      event.target.reset();
     }
   };
 

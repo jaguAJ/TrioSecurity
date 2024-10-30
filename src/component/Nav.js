@@ -4,8 +4,7 @@ function Nav({ close, navName, to }) {
   return (
     <NavLink
       to={to}
-      className="nav-link"
-      activeClassName="active" // Adds 'active' class when the route matches
+      className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
       onClick={close}
     >
       {navName}

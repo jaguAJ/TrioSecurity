@@ -65,7 +65,11 @@ function MainNavigation({ isTransparent }) {
             <Nav close={closeMenu} navName="About Us" to="/aboutus" />
           </li>
           <li>
-            <NavLink onClick={closeMenu} to="/GetInTouch" className="btn">
+            <NavLink
+              to="/GetInTouch"
+              onClick={closeMenu}
+              className={({ isActive }) => (isActive ? "btn active" : "btn")}
+            >
               Get in Touch
             </NavLink>
           </li>
